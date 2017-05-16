@@ -49,7 +49,7 @@ class MenuItem(Base):
        }
 
 
-engine = create_engine('sqlite:///virtualvendingmachine.db')
+engine = create_engine('postgresql://catalog:planet8@localhost/vvmdatabase')
  
 
 Base.metadata.create_all(engine)
