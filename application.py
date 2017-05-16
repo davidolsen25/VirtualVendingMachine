@@ -21,7 +21,7 @@ APPLICATION_NAME = "Virtual Vending Machine"
 
 
 # Connect to Database and create database session
-engine = create_engine('sqlite:///virtualvendingmachine.db')
+engine = create_engine('postgresql://catalog:planet8@localhost/vvmdatabase')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
