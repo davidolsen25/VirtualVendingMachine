@@ -1,0 +1,78 @@
+body            { font-family: arial, sans-serif; padding-left: 25px;
+    padding-right: 25px;
+  	filter: alpha(opacity=20); /* For IE8 and earlier */  
+  	background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, teal);
+     /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, teal); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, teal); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, teal); /* Standard syntax *//
+}
+ h1, h2, h3    { color: black;}
+
+a {color: black; text-decoration: none;}
+a:hover {color: red; }
+a,visited {color: black;}
+ul li {list-style-type: none; padding: 0; margin: 0;}
+
+
+ .header { postion: relative; background-image: url('circuitBoardBar100.jpg');
+  height: 100px; border-radius: 18px; }
+
+ .flashed {background-color: teal; color: white; text-decoration: none;
+  text-align: center; display: block;}
+
+ .catbox { border: 5px; border-color: black; border-radius: 5px;
+  background-color: gray; opacity: 0.6; height: 40px; text-align: center;
+   margin-top: 7px; margin-bottom: 7px; font-size: 32px; margin: 5px;}
+
+ .catbox:hover { background-color: white;}
+
+  .itembox { border: 5px; border-color: black; border-radius: 5px;
+  background-color: gray; opacity: 0.6; height: 30px; text-align: center;
+   margin-top: 7px; margin-bottom: 7px; font-size: 24px;}
+
+ .itembox:hover { background-color: white;}  
+
+ .itemdescription { border: 5px; border-color: black; border-radius: 8px;
+  background-color: white; opacity: 0.7; padding: 10px; height: 220px;
+  width: 50%; padding-left: 20px;}
+
+ .categorybox { border: 5px; border-color: black; border-radius: 5px;
+  background-color: white; opacity: 0.6; height: 40px; text-align: center;
+   margin-top: 7px; margin-bottom: 7px; font-size: 32px;}
+
+ .button { border-radius: 5px; background-color: white; height: 14 px;
+  width: 65px; opacity: 0.6; text-align: center;}
+
+ .button2 { border-radius: 5px; background-color: white; height: 20 px;
+  width: 145px; text-align: center; opacity: 0.6}
+
+ .button3 { border-radius: 5px; background-color: white; height: 20 px;
+  width: 200px; text-align: center; opacity: 0.6}
+
+ .login { font-family: arial, sans-serif; z-index: 2;
+  min-height: 900px;
+    filter: alpha(opacity=20); /* For IE8 and earlier */  
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, teal);
+     /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, teal); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, teal); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, teal); /* Standard syntax *//
+}
+
+ #signInButton { padding-left: 20px; padding-top: 0px;}
+
+ #fbButton {padding-left: 10px;}
+
+ #result {padding-left: 400px;}
+
+ #directions {background-color: teal; color: white; width: 300px; 
+  height: 65px;  border-radius: 5px; text-align: center;
+  vertical-align: middle; font-size: 25px;
+  font-family: dotum, arial, sans-serif; margin-top: 20px;}
+
+ #box {background-color: white; border: 3px; border-radius: 5px;
+  border-color: teal; border-width: 6px;  width: 200px; height: 65px;
+  padding-top: 10px; margin-top: 20px; padding-bottom: 10px;}

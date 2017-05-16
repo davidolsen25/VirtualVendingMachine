@@ -1,0 +1,57 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',
+  filename='vvmStyle.css') }}">
+</head>
+<body>
+
+<h1>Virtual Vending Machine</h1>
+<div class=header>
+</div>
+<br>
+
+
+<div class=flashed>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+
+<ul>
+{% for message in messages %}
+  <li><strong>{{message}}</strong></li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+</div>
+
+<h1>Edit {{editingItem.name}}:</h1>
+
+<form action="{{url_for('editItem', category=editingItem.category,
+ item_id=editingItem.id, editingItem=editingItem)}}", method = 'POST'>
+
+<div>
+Name*:<br><br>
+<input type='text' size='30' name='name' placeholder= '{{editingItem.name}}'>
+<br><br>
+Description:<br><br>
+<input type='text' size='100' name='description'
+ placeholder= '{{editingItem.description}}'>
+<br><br>
+Price:<br><br>
+<input type='text' size='8' name='price' placeholder= '{{editingItem.price}}'>
+<br><br>
+Category*:
+<br><br>
+<input type='radio' name='category' value='Beverage'>&nbsp Beverage<br>
+<input type='radio' name='category' value='Healthy'>&nbsp Healthy<br>
+<input type='radio' name='category' value='Savory'>&nbsp Savory<br>
+<input type='radio' name='category' value='Sweet'>&nbsp Sweet<br>
+<br>
+*required field
+<br><br>
+<input type='submit' value='Edit'>
+<br><br>
+<a href ='{{url_for('showItem', category=editingItem.category,
+ item_id=editingItem.id)}}'><div class=button>Go Back</div></a>
+</body>
+</html>

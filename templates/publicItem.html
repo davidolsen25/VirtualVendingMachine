@@ -1,0 +1,50 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',
+  filename='vvmStyle.css') }}">
+</head>
+<body>
+
+<h1>Virtual Vending Machine</h1>
+<div class=header>
+</div>
+<br>
+
+
+<div class=flashed>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+
+<ul>
+{% for message in messages %}
+  <li><strong>{{message}}</strong></li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+</div>
+<div class=itemdescription>
+<h3>{{item.name}}</h3>
+
+Category: {{item.category}}
+<br><br>
+Description: {{item.description}}
+<br><br>
+Price: {{item.price}}
+<br><br>
+</div>
+<br><br><br>
+<a href ='{{url_for('showCategoryItems', category=item.category)}}'><div class=button>Go Back</div></a>
+
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+</html>

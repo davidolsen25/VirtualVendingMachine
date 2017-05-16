@@ -1,0 +1,70 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',
+  filename='vvmStyle.css') }}">
+</head>
+<body>
+<h1>Virtual Vending Machine</h1>
+
+<div class=header>
+</div>
+<br>
+<div align=right>
+					{%if 'username' not in session %}
+				<div class=button2><a href="{{url_for('showLogin')}}">
+					Click Here to Login </a></div>
+				{% else %}
+				<div class=button2><a href="{{url_for('disconnect')}}">
+					Disconnect </a></div>
+				{% endif %}
+		
+</div>
+
+
+<div class=button3><a href='{{url_for('newItem') }}'>
+	Create New Menu Item</a></div>
+
+<div class=flashed>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+
+<ul>
+{% for message in messages %}
+  <li><strong>{{message}}</strong></li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+</div>
+
+<h2>Categories:</h2>
+
+<a href='{{url_for('showCategoryItems', category = 'Beverage')}}'>
+	<div class=catbox>Beverage</div></a>
+<a href='{{url_for('showCategoryItems', category = 'Healthy')}}'>
+	<div class=catbox>Healthy</div></a>
+<a href='{{url_for('showCategoryItems', category = 'Savory')}}'>
+	<div class=catbox>Savory</div></a>
+<a href='{{url_for('showCategoryItems', category = 'Sweet')}}'>
+	<div class=catbox>Sweet</div></a>
+
+
+<h2>Latest Items:</h2>
+{% for i in latest %}
+
+<a href='{{url_for('showItem', category=i.category, item_id=i.id)}}'>
+	<div class=itembox>{{i.name}}
+ ({{i.category}})</div></a>
+
+{% endfor %}
+<br><br>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>
